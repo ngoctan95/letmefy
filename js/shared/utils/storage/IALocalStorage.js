@@ -4,7 +4,17 @@ import Constant from "../constant/Constant";
 class IALocalStorage {
 
   /**
-   * Set/get user info
+   * Set/get TOKEN for FIRST TIME GO TO APP
+   */
+  static setTokenFirstTime = async (tokenFirstTime) => {
+  	await IAStorageManager.setItem(Constant.USER.TOKEN_FIRST_TIME, tokenFirstTime);
+  }
+  static getTokenFirstTime = async () => {
+  	return await IAStorageManager.getItem(Constant.USER.TOKEN_FIRST_TIME);
+  }
+
+  /**
+   * Set/get USER INFO
    */
   static setUserInfo = async (userInfo) => {
   	await IAStorageManager.setItem(Constant.USER.USER_INFO, userInfo);

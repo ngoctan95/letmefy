@@ -37,10 +37,10 @@ export const fonts = {
 			regular: "Polsku",
 		},
 		toonTime: {
-			regular: "SF_Toontime",
-			blotchItalic: "SF_Toontime_Blotch_Italic",
-			bold: "SF_Toontime_Bold",
-			italic: "SF_Toontime_Italic",
+			regular: "SFToontime",
+			blotchItalic: "SFToontime_Blotch_Italic",
+			bold: "SFToontime-Bold",
+			italic: "SFToontime_Italic",
 		}
 	}
 };

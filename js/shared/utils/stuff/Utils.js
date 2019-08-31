@@ -721,6 +721,10 @@ export default class Utils {
 		return number;
 	}
 
+	static randomInRange(start,end){
+		return Math.floor(Math.random() * (end - start + 1) + start);
+	}
+
 	static convertTime(time, formatType = "hh:mm dd/MM/YYYY"){
 		let date = time;
 		if(typeof time != "date"){

@@ -1,80 +1,15 @@
 {
-    "appName": "Fanathon",
-    "motto": "Fantasy TV Invite, Vote, Watch and Win!",
-    "signinToContinue": "Sign in\nto continue",
-    "welcomeTitle": "Welcome back",
-    "signIn": "Sign in",
-    "signUp": "Sign up",
-    "signInTitle": "Sign in with your account",
-    "signUpTitle": "Create Account",
-    "mottoSignUp": "Enjoy Fantasy TV, Invite, Vote, Watch & Win!",
-    "email": "Email",
-    "password": "Password",
-    "forgotPassword": "Forgot Password?",
-    "somethingWrong": "Something wrong, please try again!",
-    "error": "Error",
-    "validEmailIncorrect": "Email is invalid format",
-    "validPasswordIncorrect": "Password is not empty",
-    "validFieldEmpty": "Field must not be empty",
-    "success": "Success",
-    "loginSuccess": "Login successfully",
-    "loginFail": "Login fail",
-    "signUpSuccess": "Sign up successfully",
-    "ok": "OK",
-    "send": "Send",
-    "termAndCondition": "By signing up you agree to our \nTerms and Conditions & Privacy Policy",
-    "forceTermAndCondition": "You have to agree our Terms and Conditions & Privacy Policy",
-    "forgotPasswordTitle": "Forgot Password",
-    "resetPasswordSuccessfully": "An email has been sent to your mail box, please check again",
-    "mottoForgotPassword": "Please enter your email to request a password reset",
-    "google": {
-      "notSupport": "Google Play Services are not available",
-      "googleSignInSuspend": "Google Signin Error"
-    },
-    "facebook": {
-      "errorFetchingData": "Error fetching data from facebook GraphRequest"
-    },
-    "resetPasswordViaEmail": {
-      "title": "Reset password",
-      "newPassword": "New PASSWORD",
-      "confirmPassword": "CONFIRM PASSWORD",
-      "doNotMatch": "Password and confirm password do not match"
-    },
-    "logout": {
-      "title": "Logout"
-    },
-    "home": {
-      "allEvent": "All Events",
-      "myLeagues": "My Leagues",
-      "leagues": "Leagues",
-      "welcome": "Welcome",
-      "upcommingEvent": "Upcoming events",
-      "createdLeague": "Created Leagues",
-      "joinedLeague": "Joined Leagues",
-      "event": "Event: "
-    },
-    "drawer": {
-      "home": "Home",
-      "leagues": "Leagues",
-      "leaguesCreation": "League Creation",
-      "results": "Results",
-      "notification": "Notifications",
-      "settings": "Settings",
-      "logout": "Log Out"
-    },
-    "notification": {
-      "title": "Notifications",
-      "clearAll": "Clear all"
-    },
-    "createLeague": {
-      "title": "Create League",
-      "leagueTitle": "League Title",
-      "selectEvent": "Select event",
-      "create": "Create",
-      "thankyou": "Thank you!",
-      "yourLeagueCreated": "Your League have been created",
-      "invite": "Invite",
-      "share": "Share",
-      "shareContent": "Here is content for sharing..."
-    }
+  "appName": "Letmefy",
+  "splashScreen": {
+    "title": "Letmefy",
+    "motto": "Get your and your friend moments take part in here. \nEverything is will in the heaven"
+  },
+  "introductionScreen": {
+    "btnGetStarted": "Get started",
+    "airBaloonMotto": "Storage moments.\nShare everywhere and everytime",
+    "boatMotto": "Longtrip with pictures? \nTake a shot and push to anyone",
+    "egyptMotto": "You want to go somewhere?\nDon't let memories be forgotten",
+    "moutainMotto": "Go hiking?\nOne shot and share to anyone, huh?",
+    "planeMotto": "So let move on.\nPlane ready, take your headshot for playing around here"
+  }
 }

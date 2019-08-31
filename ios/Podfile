@@ -29,6 +29,10 @@ target 'letmefy' do
 
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'letmefyTests' do
     inherit! :search_paths
     # Pods for testing

@@ -37,52 +37,53 @@
 			</dict>
 		</dict>
 	</dict>
-  <key>UIAppFonts</key>
-  <array>
-    <string>AntDesign.ttf</string>
-    <string>Avenir-Book</string>
-    <string>Entypo.ttf</string>
-    <string>EvilIcons.ttf</string>
-    <string>Feather.ttf</string>
-    <string>FontAwesome.ttf</string>
-    <string>FontAwesome5_Brands.ttf</string>
-    <string>FontAwesome5_Regular.ttf</string>
-    <string>FontAwesome5_Solid.ttf</string>
-    <string>Foundation.ttf</string>
-    <string>Ionicons.ttf</string>
-    <string>MaterialIcons.ttf</string>
-    <string>MaterialCommunityIcons.ttf</string>
-    <string>SimpleLineIcons.ttf</string>
-    <string>Octicons.ttf</string>
-    <string>Zocial.ttf</string>
-    
-    <string>Nunito-Regular.ttf</string>
-    <string>Nunito-SemiBold.ttf</string>
-    <string>Nunito-Bold.ttf</string>
-    <string>Nunito-BoldItalic.ttf</string>
-    <string>Nunito-Black.ttf</string>
-    <string>Nunito-ExtraBold.ttf</string>
-    <string>Nunito-ExtraBoldItalic.ttf</string>
-    <string>Nunito-ExtraLight.ttf</string>
-    <string>Nunito-ExtraLightItalic.ttf</string>
-    <string>Nunito-SemiBold.ttf</string>
-    <string>Nunito-SemiBoldItalic.ttf</string>
-    
-    <string>Montserrat-SemiBold.otf</string>
-    <string>Montserrat-Bold.otf</string>
-    <string>Montserrat-BoldItalic.otf</string>
-    <string>Montserrat-Regular.otf</string>
-    <string>Montserrat-Medium.otf</string>
-    
-    <string>Polsku.ttf</string>
-    <string>SF-Toontime_Blotch_Italic.ttf</string>
-    <string>SF-Toontime_Bold_Italic.ttf</string>
-    <string>SF-Toontime_Blotch.ttf</string>
-    <string>SF-Toontime_Italic.ttf</string>
-    <string>SF-Toontime.ttf</string>
-  </array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AntDesign.ttf</string>
+		<string>Avenir-Book</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>Zocial.ttf</string>
+		<string>Nunito-Regular.ttf</string>
+		<string>Nunito-SemiBold.ttf</string>
+		<string>Nunito-Bold.ttf</string>
+		<string>Nunito-BoldItalic.ttf</string>
+		<string>Nunito-Black.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
+		<string>Nunito-ExtraBoldItalic.ttf</string>
+		<string>Nunito-ExtraLight.ttf</string>
+		<string>Nunito-ExtraLightItalic.ttf</string>
+		<string>Nunito-SemiBoldItalic.ttf</string>
+		<string>Montserrat-SemiBold.otf</string>
+		<string>Montserrat-Bold.otf</string>
+		<string>Montserrat-BoldItalic.otf</string>
+		<string>Montserrat-Regular.otf</string>
+		<string>Montserrat-Medium.otf</string>
+		<string>Polsku.ttf</string>
+		<string>SF_Toontime_Blotch_Italic.ttf</string>
+		<string>SF_Toontime_Bold_Italic.ttf</string>
+		<string>SF_Toontime_Blotch.ttf</string>
+		<string>SF_Toontime_Italic.ttf</string>
+		<string>SF_Toontime_Bold.ttf</string>
+		<string>SF_Toontime.ttf</string>
+		<string>Nunito-BlackItalic.ttf</string>
+		<string>Nunito-Italic.ttf</string>
+		<string>Nunito-Light.ttf</string>
+		<string>Nunito-LightItalic.ttf</string>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

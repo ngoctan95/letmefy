@@ -2,7 +2,6 @@ import {StyleSheet} from "react-native";
 import {colors} from "../../shared/utils/colors/colors";
 import {fonts} from "../../shared/utils/fonts/fonts";
 import {ScreenHeight} from "../../shared/utils/dimension/Divices";
-// import { isIphoneX } from "../../shared/utils/device/device";
 import {ifIphoneX} from "react-native-iphone-x-helper";
 
 const LOGO_MARGIN_TOP = ScreenHeight / 11 ;
@@ -13,40 +12,47 @@ export const styles = StyleSheet.create({
 		width: null,
 		height: null,
 	},
+	videoContainer: {
+		position: "absolute",
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0
+	},
 	logo: {
 		marginTop: ifIphoneX ? LOGO_MARGIN_TOP : LOGO_MARGIN_TOP - 15,
 	},
 	title: {
-		fontFamily: fonts.family.nunito.regular,
-		fontSize: 22,
-		marginLeft: 24,
-		marginRight: 24,
-		fontWeight: "normal",
-		fontStyle: "normal",
+		fontFamily: fonts.family.toonTime.bold,
+		fontSize: 55,
+		fontWeight: "bold",
 		letterSpacing: 0,
 		textAlign: "center",
-		color: colors.white
-	},
-	mottoContainer: {
-		width: "100%",
-		height: 100,
+		color: colors.white,
 		justifyContent: "center",
 		alignItems: "center",
+		alignSelf: "center",
+		alignContent: "center",
+		width: "80%",
 		position: "absolute",
-		bottom: 53,
-		marginLeft: 12,
-		marginRight: 12,
+		top: ScreenHeight / 4 - 70,
+		left: "10%",
 	},
 	motto: {
 		fontFamily: fonts.family.nunito.regular,
-		fontSize: 22,
-		marginLeft: 24,
-		marginRight: 24,
-		fontWeight: "normal",
-		fontStyle: "normal",
+		fontSize: 16,
+		fontWeight: "bold",
 		letterSpacing: 0,
 		textAlign: "center",
-		color: colors.white
+		color: colors.white,
+		justifyContent: "center",
+		alignItems: "center",
+		alignSelf: "center",
+		alignContent: "center",
+		width: "70%",
+		position: "absolute",
+		top: ScreenHeight - 150,
+		left: "15%",
 	}
 });
 

@@ -1,36 +1,73 @@
 import React from "react";
-import {ImageBackground, StatusBar} from "react-native";
+import {StatusBar, View} from "react-native";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import BaseScreen from "../BaseScreen";
-import {splashAnim, splashAnimFinish, splashAnimCounter} from "./actions";
 import {styles} from "./style";
-import {images} from "../../../assets/index";
-import IALocalStorage from "../../shared/utils/storage/IALocalStorage";
+import {videos} from "../../../assets/index";
 import {ScreenNames} from "../../route/ScreenNames";
+import I18n from "../../shared/utils/locale/i18n";
+import Video from "react-native-video";
+import *  as Animatable from "react-native-animatable";
+import Utils from "../../shared/utils/stuff/Utils";
+import IALocalStorage from "../../shared/utils/storage/IALocalStorage";
+const videoList = [
+	{"name": "Heaven", "video": videos.heaven},
+	{"name": "Fire Snow", "video": videos.fireSnow},
+	{"name": "Crocodile", "video": videos.crocodile},
+	{"name": "Keep Running", "video": videos.keepRunning},
+];
+
+const langs = {
+	title: I18n.t("splashScreen.title"),
+	motto: I18n.t("splashScreen.motto"),
+};
 
 class SplashScreen extends BaseScreen {
+	constructor(props) {
+		super(props);
+		this.state = {
+			shouldShowTitle: false,
+			currentIndexRandomized: 0,
+		};
+	}
+
+	componentWillMount() {
+		const currentIndexRandomized = Utils.randomInRange(0, 3);
+		this.setState({currentIndexRandomized});
+	}
+
 	componentDidMount() {
-		this.props.splashAnim();
+		this._updateTitle();
+		this._updateTimeLeftToGoToHomeScreen();
+	}
+
+	_updateTitle() {
+		setTimeout(()=>{
+			this.setState({
+				shouldShowTitle: true,
+			});
+		}, 1500);
+	}
+
+	_updateTimeLeftToGoToHomeScreen() {
+		setTimeout(()=>{
+			this._directOpenScreenByUserToken();
+		}, 5000);
 	}
 
 	componentWillReceiveProps(nextProps) {
 		if (!nextProps) {
 			return;
 		}
-		if (nextProps.num <= 1) {
-			this.props.splashAnim();
-		} else {
-			this._directOpenScreenByUserToken();
-		}
 	}
 
 	async _directOpenScreenByUserToken () {
-		const tokenExist = await IALocalStorage.getTokenUserInfo();
+		const tokenExist = await IALocalStorage.getTokenFirstTime();
 		if (tokenExist) {
-			this._goToHomeScreen();
+		  this._goToWelcomeScreen();
 		} else {
-			this._goToWelcomeScreen();
+			this._goToHomeScreen();
 		}
 	}
 
@@ -38,30 +75,49 @@ class SplashScreen extends BaseScreen {
   	this.goToScreen(ScreenNames.WelcomeScreen);
   }
 
-  _goToHomeScreen = () => {
-  	this.goToScreen(ScreenNames.HomeScreen);
+  _goToIntroductionScreen = () => {
+  	this.goToScreen(ScreenNames.WelcomeScreen);
   }
 
   render() {
   	return (
-  		<ImageBackground style={styles.mainContainer} source={images.splash} resizeMode={"cover"}>
+  		<View style={styles.mainContainer}>
   			<StatusBar barStyle="light-content" hidden/>
-  		</ImageBackground>
+  			<Video
+  				source={videoList[this.state.currentIndexRandomized].video}
+  				style={styles.videoContainer}
+  				muted={true}
+  				repeat={false}
+  				resizeMode="cover"/>
+  			<View>
+  			<Animatable.Text
+  				animation={"fadeInDownBig"}
+  					duration={3500}
+  				style={styles.title}>
+  				  {this.state.shouldShowTitle ? langs.title : ""}
+  			</Animatable.Text>
+  			<Animatable.Text
+  					animation={"fadeInUpBig"}
+  					easing="ease-in-out-back"
+  					duration={3500}
+  					onTransitionEnd={()=>{()=>this._directOpenScreenByUserToken();}}
+  				style={styles.motto}>
+  				  {this.state.shouldShowTitle ? langs.motto : ""}
+  			</Animatable.Text>
+  			</View>
+  		</View>
   	);
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 const mapStateToProps = state => {
-	return state.splashReducer;
+	return {};
 };
 
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(
-		{
-			splashAnim,
-			splashAnimFinish,
-			splashAnimCounter
-		},
+		{},
 		dispatch
 	);
 

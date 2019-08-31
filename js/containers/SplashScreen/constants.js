@@ -1,3 +1,0 @@
-export const SPLASH_ANIM = "SPLASH_ANIM";
-export const SPLASH_ANIM_FINISH = "SPLASH_ANIM_FINISH";
-export const SPLASH_COUNTER = "SPLASH_COUNTER";
