@@ -1,5 +1,5 @@
 export const images = {
-	splash: require("./imgs/splash_1.jpg"),
+	splash: require("./imgs/splash.jpg"),
 	logo: require("./imgs/logo.png"),
 	welcome_bg: require("./imgs/welcome_background.png"),
 	drawer_bg: require("./imgs/drawer_bg.png"),
