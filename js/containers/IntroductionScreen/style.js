@@ -25,6 +25,10 @@ export default StyleSheet.create({
 		alignSelf: "center",
 		left: "15%"
 	},
+	loading: {
+		color: colors.white,
+		fontSize: 16
+	},
 	pageHeight: {
 		bottom: (5 * ScreenHeight) / 100, right: 0
 	},

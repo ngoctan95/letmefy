@@ -1,12 +1,12 @@
 import React from "react";
 import {View, StyleSheet} from "react-native";
-import {DotIndicator} from "react-native-indicators";
+import {PulseIndicator} from "react-native-indicators";
 import {colors} from "../utils/colors/colors";
 
 const IARefreshing = ({color, size, style}) => {
 	return (
 		<View style={[styles.mainContainer, style]}>
-			<DotIndicator
+			<PulseIndicator
 				color={(color && color) || colors.yellow}
 				count={5}
 				size={(size && size) || 13}
