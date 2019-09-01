@@ -1,17 +1,17 @@
-import {Dimensions, StyleSheet} from "react-native";
+import {StyleSheet, Platform} from "react-native";
 import {colors} from "../../shared/utils/colors/colors";
-const PAGE_WIDTH = Dimensions.get("window").width;
-const PAGE_HEIGHT = Dimensions.get("window").height;
+import {ScreenHeight, ScreenWidth} from "../../shared/utils/dimension/Divices";
 const entryBorderRadius = 5;
 export default StyleSheet.create({
 	container: {
 		flex: 1,
-		alignItems: "flex-end",
+		alignContent: "center",
+		justifyContent: "center",
 		backgroundColor: "rgba(45, 47, 59, 1)",
 	},
 	swipe: {
 		backgroundColor: "transparent",
-		paddingTop: PAGE_HEIGHT * 20 / 100,
+		paddingTop: ScreenHeight * 20 / 100,
 		paddingBottom: 50,
 		paddingLeft: 40,
 		paddingRight: 20,
@@ -26,33 +26,34 @@ export default StyleSheet.create({
 		left: "15%"
 	},
 	pageHeight: {
-		bottom: (5 * PAGE_HEIGHT) / 100, right: 0
+		bottom: (5 * ScreenHeight) / 100, right: 0
 	},
 	page: {
 		position: "relative",
-		width: PAGE_WIDTH - 80,
+		width: ScreenWidth - 80,
+		left: Platform.OS === "ios" ? 0 : 40,
+		top: Platform.OS === "ios" ? 0 : ScreenHeight / 5,
 		alignItems: "center",
 		justifyContent: "center",
+		alignContent: "center",
 		borderRadius: entryBorderRadius,
 		backgroundColor: "#ccc"
 	},
 
 	desc: {
-		fontSize: PAGE_WIDTH / 28,
+		fontSize: ScreenWidth / 28,
 		color: "rgba(99, 99, 99, 1)",
 		backgroundColor: "transparent",
-		marginTop: 2 * PAGE_HEIGHT/100,
-		marginBottom: 5 * PAGE_HEIGHT/100,
+		marginTop: 2 * ScreenHeight/100,
+		marginBottom: 5 * ScreenHeight/100,
 		lineHeight: 25,
 		textAlign: "center",
 	},
-
 	icon: {
 		alignItems: "center",
-		width: PAGE_WIDTH /2,
+		width: ScreenWidth /2,
 		resizeMode: "contain"
 	},
-
 	card: {
 		paddingLeft: 20,
 		paddingRight: 20,
@@ -60,15 +61,13 @@ export default StyleSheet.create({
 		left: 0,
 		bottom: 0,
 		zIndex: 10,
-		width: PAGE_WIDTH - 80,
+		width: ScreenWidth - 80,
 		alignItems: "center",
-
 		shadowColor: "#000",
 		shadowOpacity: .2,
 		shadowRadius: entryBorderRadius,
 		shadowOffset: {width: 0, height: 4},
 		elevation: 5,
-
 		backgroundColor: "rgba(255,255,255, 1)",
 		borderRadius: entryBorderRadius,
 	},
@@ -76,7 +75,7 @@ export default StyleSheet.create({
 	shadowCard: {
 		left: 10,
 		bottom: -10,
-		width: PAGE_WIDTH - 100,
+		width: ScreenWidth - 100,
 		position: "absolute",
 		zIndex: 8,
 		height: 10,
@@ -99,7 +98,7 @@ export default StyleSheet.create({
 		zIndex: 8,
 		bottom: -20,
 		left: 20,
-		width: PAGE_WIDTH - 120,
+		width: ScreenWidth - 120,
 		height: 10,
 		paddingLeft: 20,
 		paddingRight: 20,

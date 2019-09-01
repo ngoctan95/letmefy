@@ -14,7 +14,7 @@ const langs = {
 	getStarted: I18n.t("introductionScreen.btnGetStarted")
 };
 
-export default class Index extends BaseScreen {
+export default class IntroductionScreen extends BaseScreen {
   static navigationOptions = () => {
   	return {
   		header: null
@@ -33,7 +33,8 @@ export default class Index extends BaseScreen {
   async checkTokenFirstTime() {
   	var isFirstTime = await IALocalStorage.getTokenFirstTime();
   	if (isFirstTime) {
-  		this._goToSplashScreen();
+  		// this._goToSplashScreen();
+  		this.setState({shouldShowContent: true});
   	} else {
   		this.setState({shouldShowContent: true});
   	}
@@ -57,10 +58,9 @@ export default class Index extends BaseScreen {
   					paginationStyle={styles.pageHeight}
   					style={styles.swipe}
   					loop={false}
-  					onIndexChanged={e => this.setState({currentIndex: e})}
-  				>
+  					onIndexChanged={e => this.setState({currentIndex: e})}>
   					{onBoardingData.map((page, i) => (
-  						<View key={i} style={[styles.page]}>
+  						<View key={i} style={styles.page}>
   							<View style={styles.card}>
   								<Image source={page.img} style={styles.icon} />
   								<TouchableOpacity onPress={() => goBack()}>
