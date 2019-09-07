@@ -1,63 +1,56 @@
 import {StyleSheet} from "react-native";
 import {colors} from "../../shared/utils/colors/colors";
 import {fonts} from "../../shared/utils/fonts/fonts";
-import {ScreenHeight, ScreenWidth} from "../../shared/utils/dimension/Divices";
+import {ScreenHeight} from "../../shared/utils/dimension/Divices";
+import {ifIphoneX} from "react-native-iphone-x-helper";
 
+const LOGO_MARGIN_TOP = ScreenHeight / 11 ;
 
 export const styles = StyleSheet.create({
 	mainContainer: {
 		flex: 1,
-		backgroundColor: colors.welcome_screen_background_fill
+		width: null,
+		height: null,
 	},
-	signInContainer: {
-		width: "100%",
-		flexDirection: "column",
-		height: (ScreenHeight * 2) / 5 - 20,
-		justifyContent: "center",
-		alignItems: "center",
+	videoContainer: {
 		position: "absolute",
-		fontFamily: fonts.family.nunito.regular,
-		bottom: 0,
-		// backgroundColor:
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0
 	},
-	signInTitle: {
-		fontFamily: fonts.family.nunito.regular,
-		fontSize: 40,
-		marginBottom: 28,
-		fontWeight: "normal",
-		fontStyle: "normal",
+	logo: {
+		marginTop: ifIphoneX ? LOGO_MARGIN_TOP : LOGO_MARGIN_TOP - 15,
+	},
+	title: {
+		fontFamily: fonts.family.nunito.bold,
+		fontSize: 55,
 		letterSpacing: 0,
 		textAlign: "center",
-		color: colors.white
-	},
-	buttonText: {
-		fontSize: 20,
-		fontFamily: fonts.family.nunito.regular
-	},
-	buttonRightContainer: {
-		width: (ScreenWidth - 52 - 10) / 2,
-		height: 65,
-		borderWidth: 2.5,
-		borderColor: colors.white,
-		borderRadius: 50,
-		marginLeft: 10,
-	},
-	buttonLeftContainer: {
-		width: (ScreenWidth - 52 - 10) / 2,
-		height: 65,
-		borderWidth: 2.5,
-		borderColor: colors.white,
-		borderRadius: 50,
-		marginRight: 10,
-	},
-	buttonView: {
-		width: 200,
-		height: 65,
-	},
-	buttonContainer: {
-		flexDirection: "row",
+		color: colors.white,
 		justifyContent: "center",
+		alignItems: "center",
+		alignSelf: "center",
 		alignContent: "center",
+		width: "80%",
+		position: "absolute",
+		top: ScreenHeight / 4 - 70,
+		left: "10%",
+	},
+	motto: {
+		fontFamily: fonts.family.nunito.regular,
+		fontSize: 16,
+		letterSpacing: 0,
+		textAlign: "center",
+		color: colors.white,
+		justifyContent: "center",
+		alignItems: "center",
+		alignSelf: "center",
+		alignContent: "center",
+		width: "70%",
+		position: "absolute",
+		top: ScreenHeight - 150,
+		left: "15%",
 	}
 });
 

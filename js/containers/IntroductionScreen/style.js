@@ -36,14 +36,13 @@ export default StyleSheet.create({
 		position: "relative",
 		width: ScreenWidth - 80,
 		left: Platform.OS === "ios" ? 0 : 40,
-		top: Platform.OS === "ios" ? 0 : ScreenHeight / 5,
+		top: Platform.OS === "ios" ? 0 : ScreenHeight / 6,
 		alignItems: "center",
 		justifyContent: "center",
 		alignContent: "center",
 		borderRadius: entryBorderRadius,
 		backgroundColor: "#ccc"
 	},
-
 	desc: {
 		fontSize: ScreenWidth / 28,
 		color: "rgba(99, 99, 99, 1)",

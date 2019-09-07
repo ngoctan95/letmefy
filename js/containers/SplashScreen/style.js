@@ -23,9 +23,8 @@ export const styles = StyleSheet.create({
 		marginTop: ifIphoneX ? LOGO_MARGIN_TOP : LOGO_MARGIN_TOP - 15,
 	},
 	title: {
-		fontFamily: fonts.family.toonTime.bold,
+		fontFamily: fonts.family.nunito.bold,
 		fontSize: 55,
-		fontWeight: "bold",
 		letterSpacing: 0,
 		textAlign: "center",
 		color: colors.white,
@@ -41,7 +40,6 @@ export const styles = StyleSheet.create({
 	motto: {
 		fontFamily: fonts.family.nunito.regular,
 		fontSize: 16,
-		fontWeight: "bold",
 		letterSpacing: 0,
 		textAlign: "center",
 		color: colors.white,

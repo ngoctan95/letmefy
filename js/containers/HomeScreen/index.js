@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import {View, Text, ScrollView, TouchableOpacity, Platform, RefreshControl} from "react-native";
 import BaseScreen from "../BaseScreen/index";
@@ -41,10 +42,10 @@ class HomeScreen extends BaseScreen {
 	}
 
 	componentDidMount() {
-		this._getData();
+		// this._getData();
 
-		// Update device token
-		this._updateDeviceToken();
+		// // Update device token
+		// this._updateDeviceToken();
 	}
 
 	_getData() {
@@ -69,48 +70,25 @@ class HomeScreen extends BaseScreen {
 		});
 	}
 
-	componentWillReceiveProps(nextProps) {
-		if (nextProps.leagueStatus !== this.props.leagueStatus || nextProps.upCommingEventsStatus !== this.props.upCommingEventsStatus) {
-			this.log("HomeScreen", nextProps);
-		}
+	// componentWillReceiveProps(nextProps) {
+	// 	if (nextProps.leagueStatus !== this.props.leagueStatus || nextProps.upCommingEventsStatus !== this.props.upCommingEventsStatus) {
+	// 		this.log("HomeScreen", nextProps);
+	// 	}
+	// }
+
+	resetToWelcomeNavigator() {
+  	// this.props.navigation.navigate(ScreenNames.WelcomeScreen);
 	}
 
-  /**
-   * @name signOut Google
-   */
-  signOutGoogle = async () => {
-  	try {
-  		await GoogleSignin.revokeAccess();
-  		await GoogleSignin.signOut();
-  	// eslint-disable-next-line no-empty
-  	} catch (error) {
-  	}
-  };
-
-  /**
-   * SignOut Facebook
-   */
-  signOutFacebook = async () => {
-  	try {
-  		LoginManager.logOut();
-  	// eslint-disable-next-line no-empty
-  	} catch (error) {
-  	}
-  }
-
-  resetToWelcomeNavigator() {
-  	this.props.navigation.navigate(ScreenNames.WelcomeScreen);
-  }
-
-  resetAllToken() {
-  	IALocalStorage.resetLocalStorage();
-  }
+	resetAllToken() {
+  	// IALocalStorage.resetLocalStorage();
+	}
 
   _onLogOutPressed = () => {
-  	this.signOutGoogle();
-  	this.signOutFacebook();
-  	this.resetToWelcomeNavigator();
-  	this.resetAllToken();
+  	// this.signOutGoogle();
+  	// this.signOutFacebook();
+  	// this.resetToWelcomeNavigator();
+  	// this.resetAllToken();
   }
 
   _renderLogoutBtn() {
@@ -167,175 +145,175 @@ class HomeScreen extends BaseScreen {
   	);
   }
 
-  _goToCreateLeagueScreen = () => {
-  	this.goToScreen(ScreenNames.CreateLeagueScreen);
-  }
+  // _goToCreateLeagueScreen = () => {
+  // 	this.goToScreen(ScreenNames.CreateLeagueScreen);
+  // }
 
-  _renderLeagues() {
-  	return (
-  		<View style={styles.leagueContainer}>
-  			<View style={[styles.titleLeague, styles.marginWithBottomTitle]}>
-  				<IAText text={langs.leagues.toUpperCase()} style={[styles.leagueStyle]}/>
-  				<IAPlusButton onPress={()=>{this._goToCreateLeagueScreen();}}/>
-  			</View>
-  			{this._renderListLeagueItems()}
-  		</View>
-  	);
-  }
+  // _renderLeagues() {
+  // 	return (
+  // 		<View style={styles.leagueContainer}>
+  // 			<View style={[styles.titleLeague, styles.marginWithBottomTitle]}>
+  // 				<IAText text={langs.leagues.toUpperCase()} style={[styles.leagueStyle]}/>
+  // 				<IAPlusButton onPress={()=>{this._goToCreateLeagueScreen();}}/>
+  // 			</View>
+  // 			{this._renderListLeagueItems()}
+  // 		</View>
+  // 	);
+  // }
 
-  _renderListLeagueItems() {
-  	var leaguesList = this.props.leagues;
-  	return leaguesList.map(item => {
-  		return (
-  			<View elevation={4} style={styles.leagueItemContainer} key={item.title}>
-  				<View style={styles.imgContentContainer}>
-  					<FastImage
-  						style={styles.imageItemContainer}
-  						source={{
-  							uri: item.image,
-  							priority: FastImage.priority.high,
-  						}}
-  						resizeMode={FastImage.resizeMode.cover}/>
-  				</View>
-  				<View style={styles.itemContentContainer}>
-  					<IAText style={styles.titleItem} text={item.title.toUpperCase()}/>
-  					<IAText style={styles.descItem} text={item.description} numberOfLines={4}/>
-  				</View>
-  			</View>
-  		);
-  	});
-  }
+  // _renderListLeagueItems() {
+  // 	var leaguesList = this.props.leagues;
+  // 	return leaguesList.map(item => {
+  // 		return (
+  // 			<View elevation={4} style={styles.leagueItemContainer} key={item.title}>
+  // 				<View style={styles.imgContentContainer}>
+  // 					<FastImage
+  // 						style={styles.imageItemContainer}
+  // 						source={{
+  // 							uri: item.image,
+  // 							priority: FastImage.priority.high,
+  // 						}}
+  // 						resizeMode={FastImage.resizeMode.cover}/>
+  // 				</View>
+  // 				<View style={styles.itemContentContainer}>
+  // 					<IAText style={styles.titleItem} text={item.title.toUpperCase()}/>
+  // 					<IAText style={styles.descItem} text={item.description} numberOfLines={4}/>
+  // 				</View>
+  // 			</View>
+  // 		);
+  // 	});
+  // }
 
-  _renderUpcommingEvents() {
-  	return (
-  		<View style={[styles.leagueContainer, styles.marginWithTopTitle]}>
-  			<IAText text={langs.upcommingEvent.toUpperCase()} style={[styles.leagueStyle, styles.marginWithBottomTitle]}/>
-  			{this._renderUpcommingEventItems()}
-  		</View>
-  	);
-  }
+  // _renderUpcommingEvents() {
+  // 	return (
+  // 		<View style={[styles.leagueContainer, styles.marginWithTopTitle]}>
+  // 			<IAText text={langs.upcommingEvent.toUpperCase()} style={[styles.leagueStyle, styles.marginWithBottomTitle]}/>
+  // 			{this._renderUpcommingEventItems()}
+  // 		</View>
+  // 	);
+  // }
 
-  _renderUpcommingEventItems() {
-  	var upCommingEvents = this.props.upCommingEvents;
-  	return upCommingEvents.map(item => {
-  		var name = item.name ? item.name : "";
-  		var detail = item.detail ? item.detail : "";
-  		return (
-  			<View elevation={4} style={styles.leagueItemContainer} key={item.id}>
-  				<View style={styles.imgContentContainer}>
-  					<FastImage
-  						style={styles.imageItemContainer}
-  						source={{
-  							uri: item.image ? item.image : Constant.MOCKING_DATA.PLACE_HOLDER,
-  							priority: FastImage.priority.high,
-  						}}
-  						resizeMode={FastImage.resizeMode.cover}/>
-  				</View>
-  				<View style={styles.itemContentContainer}>
-  					<IAText style={styles.titleItem} text={name.toUpperCase()}/>
-  					<IAText style={styles.descItem} text={detail} numberOfLines={4}/>
-  				</View>
-  			</View>
-  		);
-  	});
-  }
+  // _renderUpcommingEventItems() {
+  // 	var upCommingEvents = this.props.upCommingEvents;
+  // 	return upCommingEvents.map(item => {
+  // 		var name = item.name ? item.name : "";
+  // 		var detail = item.detail ? item.detail : "";
+  // 		return (
+  // 			<View elevation={4} style={styles.leagueItemContainer} key={item.id}>
+  // 				<View style={styles.imgContentContainer}>
+  // 					<FastImage
+  // 						style={styles.imageItemContainer}
+  // 						source={{
+  // 							uri: item.image ? item.image : Constant.MOCKING_DATA.PLACE_HOLDER,
+  // 							priority: FastImage.priority.high,
+  // 						}}
+  // 						resizeMode={FastImage.resizeMode.cover}/>
+  // 				</View>
+  // 				<View style={styles.itemContentContainer}>
+  // 					<IAText style={styles.titleItem} text={name.toUpperCase()}/>
+  // 					<IAText style={styles.descItem} text={detail} numberOfLines={4}/>
+  // 				</View>
+  // 			</View>
+  // 		);
+  // 	});
+  // }
 
-  _renderListCreatedLeagueItems() {
-  	var createdLeagues = this.props.createdLeagues;
-  	return createdLeagues.map(item => {
-  		return (
-  			<View elevation={4} style={styles.leagueItemContainer} key={item.title}>
-  				<View style={styles.imgContentContainer}>
-  					<FastImage
-  						style={styles.imageItemContainer}
-  						source={{
-  							uri: item.image,
-  							priority: FastImage.priority.high,
-  						}}
-  						resizeMode={FastImage.resizeMode.cover}/>
-  				</View>
-  				<View style={styles.itemContentContainer}>
-  					<View style={{flexDirection: "row"}}>
-  						<IAText style={styles.eventDetailItem} text={langs.event}/>
-  						<IAText style={styles.eventItem} text={item.event}/>
-  					</View>
-  					<IAText style={styles.titleItem} text={item.title.toUpperCase()} numberOfLines={2} multiLine={true}/>
-  					<IAText style={styles.descItem} text={item.description} numberOfLines={4}/>
-  				</View>
-  			</View>
-  		);
-  	});
-  }
+  // _renderListCreatedLeagueItems() {
+  // 	var createdLeagues = this.props.createdLeagues;
+  // 	return createdLeagues.map(item => {
+  // 		return (
+  // 			<View elevation={4} style={styles.leagueItemContainer} key={item.title}>
+  // 				<View style={styles.imgContentContainer}>
+  // 					<FastImage
+  // 						style={styles.imageItemContainer}
+  // 						source={{
+  // 							uri: item.image,
+  // 							priority: FastImage.priority.high,
+  // 						}}
+  // 						resizeMode={FastImage.resizeMode.cover}/>
+  // 				</View>
+  // 				<View style={styles.itemContentContainer}>
+  // 					<View style={{flexDirection: "row"}}>
+  // 						<IAText style={styles.eventDetailItem} text={langs.event}/>
+  // 						<IAText style={styles.eventItem} text={item.event}/>
+  // 					</View>
+  // 					<IAText style={styles.titleItem} text={item.title.toUpperCase()} numberOfLines={2} multiLine={true}/>
+  // 					<IAText style={styles.descItem} text={item.description} numberOfLines={4}/>
+  // 				</View>
+  // 			</View>
+  // 		);
+  // 	});
+  // }
 
-  _renderListJoinedLeagueItems() {
-  	var joinedLeagues = this.props.joinedLeagues;
-  	return joinedLeagues.map(item => {
-  		return (
-  			<View elevation={4} style={styles.leagueItemContainer} key={item.event}>
-  				<View style={styles.imgContentContainer}>
-  					<FastImage
-  						style={styles.imageItemContainer}
-  						source={{
-  							uri: item.image,
-  							priority: FastImage.priority.high,
-  						}}
-  						resizeMode={FastImage.resizeMode.cover}/>
-  				</View>
-  				<View style={styles.itemContentContainer}>
-  					<IAText style={styles.titleItem} text={item.event.toUpperCase()}/>
-  					<IAText style={styles.descItem} text={item.description} numberOfLines={4}/>
-  				</View>
-  			</View>
-  		);
-  	});
-  }
+  // _renderListJoinedLeagueItems() {
+  // 	var joinedLeagues = this.props.joinedLeagues;
+  // 	return joinedLeagues.map(item => {
+  // 		return (
+  // 			<View elevation={4} style={styles.leagueItemContainer} key={item.event}>
+  // 				<View style={styles.imgContentContainer}>
+  // 					<FastImage
+  // 						style={styles.imageItemContainer}
+  // 						source={{
+  // 							uri: item.image,
+  // 							priority: FastImage.priority.high,
+  // 						}}
+  // 						resizeMode={FastImage.resizeMode.cover}/>
+  // 				</View>
+  // 				<View style={styles.itemContentContainer}>
+  // 					<IAText style={styles.titleItem} text={item.event.toUpperCase()}/>
+  // 					<IAText style={styles.descItem} text={item.description} numberOfLines={4}/>
+  // 				</View>
+  // 			</View>
+  // 		);
+  // 	});
+  // }
 
-  _renderAllEvents() {
-  	return (
-  		<View>
-  			{ this._renderLeagues() }
-  			{ this._renderUpcommingEvents() }
-  		</View>
-  	);
-  }
+  // _renderAllEvents() {
+  // 	return (
+  // 		<View>
+  // 			{ this._renderLeagues() }
+  // 			{ this._renderUpcommingEvents() }
+  // 		</View>
+  // 	);
+  // }
 
-  _renderCreatedLeagues() {
-  	return (
-  		<View style={styles.leagueContainer}>
-  			<View style={styles.titleLeague}>
-  				<IAText text={langs.createdLeague.toUpperCase()} style={styles.leagueStyle}/>
-  				<IAPlusButton onPress={()=>{}}/>
-  			</View>
-  			{this._renderListCreatedLeagueItems()}
-  		</View>
-  	);
-  }
+  // _renderCreatedLeagues() {
+  // 	return (
+  // 		<View style={styles.leagueContainer}>
+  // 			<View style={styles.titleLeague}>
+  // 				<IAText text={langs.createdLeague.toUpperCase()} style={styles.leagueStyle}/>
+  // 				<IAPlusButton onPress={()=>{}}/>
+  // 			</View>
+  // 			{this._renderListCreatedLeagueItems()}
+  // 		</View>
+  // 	);
+  // }
 
-  _renderJoinedLeague() {
-  	return (
-  		<View style={[styles.leagueContainer, styles.marginWithTopTitle]}>
-  			<IAText text={langs.joinedLeague.toUpperCase()} style={[styles.leagueStyle, styles.marginWithBottomTitle]}/>
-  			{this._renderListJoinedLeagueItems()}
-  		</View>
-  	);
-  }
+  // _renderJoinedLeague() {
+  // 	return (
+  // 		<View style={[styles.leagueContainer, styles.marginWithTopTitle]}>
+  // 			<IAText text={langs.joinedLeague.toUpperCase()} style={[styles.leagueStyle, styles.marginWithBottomTitle]}/>
+  // 			{this._renderListJoinedLeagueItems()}
+  // 		</View>
+  // 	);
+  // }
 
-  _renderMyLeagues() {
-  	return (
-  		<View>
-  			{ this._renderCreatedLeagues() }
-  			{ this._renderJoinedLeague() }
-  		</View>
-  	);
-  }
+  // _renderMyLeagues() {
+  // 	return (
+  // 		<View>
+  // 			{ this._renderCreatedLeagues() }
+  // 			{ this._renderJoinedLeague() }
+  // 		</View>
+  // 	);
+  // }
 
-  _openDrawer() {
-  	this.props.navigation.dispatch(DrawerActions.openDrawer());
-  }
+  // _openDrawer() {
+  // 	this.props.navigation.dispatch(DrawerActions.openDrawer());
+  // }
 
-  _onRefresh = () => {
-  	this._getData();
-  }
+  // _onRefresh = () => {
+  // 	this._getData();
+  // }
 
   render() {
   	const {tab} = this.state;
@@ -370,33 +348,19 @@ class HomeScreen extends BaseScreen {
   					/>
   				}
   			>
-  				{tab == langs.allEvents ?
+  				{/* {tab == langs.allEvents ?
   					this._renderAllEvents()
   					:
   					this._renderMyLeagues()
-  				}
+  				} */}
   			</ScrollView>
   		</View>
   	);
   }
 }
+// eslint-disable-next-line no-unused-vars
 const mapStateToProps = state => {
 	return {
-		leagueStatus: state.homeReducer.leagues.status,
-		leagues: state.homeReducer.leagues.data,
-		leagueError: state.homeReducer.leagues.error,
-
-		upCommingEventsStatus: state.homeReducer.upCommingEvents.status,
-		upCommingEvents: state.homeReducer.upCommingEvents.data,
-		upCommingEventsError: state.homeReducer.upCommingEvents.error,
-
-		createdLeaguesStatus: state.homeReducer.createdLeagues.status,
-		createdLeagues: state.homeReducer.createdLeagues.data,
-		createdLeaguesError: state.homeReducer.createdLeagues.error,
-
-		joinedLeaguesStatus: state.homeReducer.joinedLeagues.status,
-		joinedLeagues: state.homeReducer.joinedLeagues.data,
-		joinedLeaguesError: state.homeReducer.joinedLeagues.error,
 	};
 };
 const mapDispatchToProps = dispatch =>

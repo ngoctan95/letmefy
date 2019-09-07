@@ -72,7 +72,7 @@ class SplashScreen extends BaseScreen {
 	}
 
   _goToWelcomeScreen = () => {
-  	this.goToScreen(ScreenNames.WelcomeScreen);
+  	this.goToScreen(ScreenNames.WelcomeScreen, {currentIndexRandomized: this.state.currentIndexRandomized});
   }
 
   _goToIntroductionScreen = () => {

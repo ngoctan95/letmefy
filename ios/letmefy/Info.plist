@@ -81,6 +81,10 @@
 		<string>Nunito-Italic.ttf</string>
 		<string>Nunito-Light.ttf</string>
 		<string>Nunito-LightItalic.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Gibson-Regular.ttf</string>
+		<string>Montserrat-MediumItalic.otf</string>
+		<string>sftoontimebold.ttf</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string/>

@@ -1,6 +1,6 @@
 /**
  * Author: UraNashel
- * Email: tan.nguyen@inapps.net
+ * Email: nguyenngoctan44@gmail.com
  */
 
 import React, {Component} from "react";
