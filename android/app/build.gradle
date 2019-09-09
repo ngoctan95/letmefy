@@ -152,12 +152,12 @@ android {
             keyPassword 'android'
         }
 
-        release {
-            storeFile file("../keystore/release_key.keystore")
-            storePassword "letmefy"
-            keyAlias "key0"
-            keyPassword "letmefy"
-        }
+        // release {
+        //     storeFile file("../keystore/release_key.keystore")
+        //     storePassword "letmefy"
+        //     keyAlias "key0"
+        //     keyPassword "letmefy"
+        // }
     }
     buildTypes {
         debug {
