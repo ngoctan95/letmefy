@@ -13,6 +13,9 @@ import {
 } from "react-native-paper";
 
 export default class App extends Component {
+	componentDidMount() {
+		console.disableYellowBox = true;
+	}
 	render() {
 		return (
 			<Provider store={Store}>

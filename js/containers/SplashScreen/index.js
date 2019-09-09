@@ -11,6 +11,7 @@ import Video from "react-native-video";
 import *  as Animatable from "react-native-animatable";
 import Utils from "../../shared/utils/stuff/Utils";
 import IALocalStorage from "../../shared/utils/storage/IALocalStorage";
+import Constant from "../../shared/utils/constant/Constant";
 const videoList = [
 	{"name": "Heaven", "video": videos.heaven},
 	{"name": "Fire Snow", "video": videos.fireSnow},
@@ -53,7 +54,7 @@ class SplashScreen extends BaseScreen {
 	_updateTimeLeftToGoToHomeScreen() {
 		setTimeout(()=>{
 			this._directOpenScreenByUserToken();
-		}, 5000);
+		}, Constant.SPLASH_TIME_OUT);
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -92,15 +93,14 @@ class SplashScreen extends BaseScreen {
   			<View>
   			<Animatable.Text
   				animation={"fadeInDownBig"}
-  					duration={3500}
+  				duration={Constant.CONTENT_TIME_OUT}
   				style={styles.title}>
   				  {this.state.shouldShowTitle ? langs.title : ""}
   			</Animatable.Text>
   			<Animatable.Text
-  					animation={"fadeInUpBig"}
-  					easing="ease-in-out-back"
-  					duration={3500}
-  					onTransitionEnd={()=>{()=>this._directOpenScreenByUserToken();}}
+  				animation={"fadeInUpBig"}
+  				easing="ease-in-out-back"
+  				duration={Constant.CONTENT_TIME_OUT}
   				style={styles.motto}>
   				  {this.state.shouldShowTitle ? langs.motto : ""}
   			</Animatable.Text>

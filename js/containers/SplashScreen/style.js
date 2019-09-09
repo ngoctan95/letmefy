@@ -51,6 +51,17 @@ export const styles = StyleSheet.create({
 		position: "absolute",
 		top: ScreenHeight - 150,
 		left: "15%",
+	},
+	absolute: {
+		position: "absolute",
+		top: ScreenHeight / 2,
+		left: 0,
+		bottom: 0,
+		right: 0,
+		height: ScreenHeight / 2,
+		width: "100%",
+		borderTopLeftRadius: 10,
+		borderTopRightRadius: 10,
 	}
 });
 

@@ -10,6 +10,10 @@ import I18n from "../../shared/utils/locale/i18n";
 import Video from "react-native-video";
 import *  as Animatable from "react-native-animatable";
 import Utils from "../../shared/utils/stuff/Utils";
+import Constant from "../../shared/utils/constant/Constant";
+import {colors} from "../../shared/utils/colors/colors";
+import IAButton from "../../shared/components/IAButton";
+
 
 var videoList = [
 	{"name": "Heaven", "video": videos.heaven},
@@ -19,8 +23,10 @@ var videoList = [
 ];
 
 const langs = {
-	title: I18n.t("splashScreen.title"),
-	motto: I18n.t("splashScreen.motto"),
+	title: I18n.t("welcomeScreen.title"),
+	motto: I18n.t("welcomeScreen.motto"),
+	login: I18n.t("welcomeScreen.login"),
+	signUp: I18n.t("welcomeScreen.signUp"),
 };
 
 class WelcomeScreen extends BaseScreen {
@@ -80,31 +86,42 @@ class WelcomeScreen extends BaseScreen {
 
   render() {
   	return (
-  		<View style={styles.mainContainer}>
+  		<View style={[styles.mainContainer, {backgroundColor: colors.black}]}>
   			<StatusBar barStyle="light-content" hidden/>
   			<Video
   				source={videoList[this.state.currentIndexRandomized].video}
   				style={styles.videoContainer}
   				muted={true}
-  				repeat={false}
+  				repeat
   				resizeMode="cover"/>
-  			<View>
-  			{/* <Animatable.Text
-  				animation={"fadeInDownBig"}
-  					duration={3500}
-  				style={styles.title}>
-  				  {this.state.shouldShowTitle ? langs.title : ""}
-  			</Animatable.Text>
-  			<Animatable.Text
-  					animation={"fadeInUpBig"}
-  					easing="ease-in-out-back"
-  					duration={3500}
-  					onTransitionEnd={()=>{()=>this._directOpenScreenByUserToken();}}
-  				style={styles.motto}>
-  				  {this.state.shouldShowTitle ? langs.motto : ""}
-  			</Animatable.Text> */}
-  			</View>
-  		</View>
+  			<Animatable.View
+  				style={styles.absolute}
+  				animation={"fadeIn"}
+  				duration={Constant.CONTENT_TIME_OUT}>
+  				<View style={{height: "50%"}}>
+  					<Animatable.Text
+  						animation={"bounceInLeft"}
+  						duration={Constant.CONTENT_TIME_OUT}
+  						style={styles.title}>
+  						{langs.title}
+  					</Animatable.Text>
+  					<Animatable.Text
+  						animation={"bounceInRight"}
+  						duration={Constant.CONTENT_TIME_OUT}
+  						style={styles.motto}>
+  						{langs.motto}
+  					</Animatable.Text>
+  				</View>
+  				<View style={styles.buttonContainer}>
+  					<Animatable.View animation="" style={styles.login}>
+  						<IAButton title={langs.login.toUpperCase()} titleStyle={styles.loginTitle}/>
+  					</Animatable.View>
+  					<Animatable.View style={styles.signUp}>
+  						<IAButton title={langs.signUp.toUpperCase()} titleStyle={styles.signUpTitle}/>
+  					</Animatable.View>
+  				</View>
+  			</Animatable.View>
+  	</View>
   	);
   }
 }

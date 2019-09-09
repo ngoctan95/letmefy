@@ -12,5 +12,11 @@
     "egyptMotto": "You want to go somewhere?\nDon't let memories be forgotten",
     "moutainMotto": "Go hiking?\nOne shot and share to anyone, huh?",
     "planeMotto": "So let move on.\nPlane ready, take your headshot for playing around here"
+  },
+  "welcomeScreen": {
+    "title": "Have a nice tour",
+    "motto": "Let those be together, everytime, everywhere!",
+    "login": "Log in",
+    "signUp": "Sign up"
   }
 }
