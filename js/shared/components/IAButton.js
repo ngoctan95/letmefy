@@ -40,13 +40,15 @@ const IAButton = ({
 				disabled={(isDisable && isDisable) || false}
 				onPress={onPress}
 			>
-				<View style={[styles.iconContainer, leftIconContainerStyle]}>{leftIcon && leftIcon}</View>
+				{leftIcon ?
+					<View style={[styles.iconContainer, leftIconContainerStyle]}>{leftIcon && leftIcon}</View> : null}
 				<Text style={[styles.buttonText, StyleSheet.flatten(titleStyle)]}>
 					{(title && title) || "Button"}
 				</Text>
-				<View style={[styles.iconContainer, rightIconContainerStyle]}>
-					{rightIcon && rightIcon}
-				</View>
+				{rightIcon ?
+					<View style={[styles.iconContainer, rightIconContainerStyle]}>
+						{rightIcon && rightIcon}
+					</View> : null}
 			</TouchableOpacity>
 			{loading && (
 				<Animatable.View
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		fontFamily: "Helvetica",
 		color: "#FFFFFF",
-		letterSpacing: 0.38,
+		letterSpacing: 0.30,
 		textAlign: "center"
 	},
 	button: {

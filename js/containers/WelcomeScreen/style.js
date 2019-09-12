@@ -1,7 +1,7 @@
 import {StyleSheet} from "react-native";
 import {colors} from "../../shared/utils/colors/colors";
 import {fonts} from "../../shared/utils/fonts/fonts";
-import {ScreenHeight} from "../../shared/utils/dimension/Divices";
+import {ScreenHeight, ScreenWidth} from "../../shared/utils/dimension/Divices";
 import {ifIphoneX} from "react-native-iphone-x-helper";
 
 const LOGO_MARGIN_TOP = ScreenHeight / 11 ;
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
 		alignSelf: "center",
 		alignContent: "center",
 		width: "80%",
-		marginTop: 40,
+		marginTop: 20,
 	},
 	motto: {
 		fontFamily: fonts.family.nunito.regular,
@@ -71,16 +71,16 @@ export const styles = StyleSheet.create({
 		alignSelf: "center",
 		marginTop: 40,
 	},
-	login: {
-		width: "45%",
-		right: "5%",
-		borderRadius: 15,
-		borderColor: colors.white,
-		borderWidth: 1
+	fbsdk: {
+    marginLeft: 20,
+    marginRight: 5,
+		width: ScreenWidth / 2 - 10 ,
+		borderRadius: 20,
+		backgroundColor: colors.blue_dodger
 	},
-	loginTitle: {
+	facebookTitle: {
 		fontFamily: fonts.family.nunito.bold,
-		fontSize: 12,
+		fontSize: 13,
 		letterSpacing: 0,
 		textAlign: "center",
 		color: colors.white,
@@ -89,9 +89,9 @@ export const styles = StyleSheet.create({
 		alignSelf: "center",
 		alignContent: "center",
 	},
-	signUpTitle: {
+	googleTitle: {
 		fontFamily: fonts.family.nunito.bold,
-		fontSize: 12,
+		fontSize: 13,
 		letterSpacing: 0,
 		textAlign: "center",
 		color: colors.white,
@@ -100,12 +100,12 @@ export const styles = StyleSheet.create({
 		alignSelf: "center",
 		alignContent: "center",
 	},
-	signUp: {
-		left: "5%",
-		width: "45%",
-		borderRadius: 15,
-		borderColor: colors.white,
-		borderWidth: 1
+	google: {
+    marginRight: 20,
+    marginLeft: 5,
+		width: ScreenWidth / 2 - 10,
+		borderRadius: 20,
+		backgroundColor: colors.red,
 	}
 });
 

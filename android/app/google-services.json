@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "145701508811",
+    "firebase_url": "https://letmefy.firebaseio.com",
+    "project_id": "letmefy",
+    "storage_bucket": "letmefy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145701508811:android:2ac58794f491451c19ad4e",
+        "android_client_info": {
+          "package_name": "com.uranashel.letmefy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145701508811-phujvpgrfg0nujuhr8rj3g8tmec7ul0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTvXGovwOtqtDTwrnr46BQ5kmGuAdfQE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145701508811-phujvpgrfg0nujuhr8rj3g8tmec7ul0l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "145701508811-el4rjkls86r0bvr96df29vec0et691b7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.uranashel.letmefy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

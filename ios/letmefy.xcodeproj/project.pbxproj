@@ -13,6 +13,12 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		275D148A232A2C3200C5BC05 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB61A68108700A75B9A /* Info.plist */; };
+		275D148E232A354F00C5BC05 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275D148D232A354F00C5BC05 /* AddressBook.framework */; };
+		275D1490232A355600C5BC05 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275D148F232A355600C5BC05 /* SafariServices.framework */; };
+		275D1492232A355E00C5BC05 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275D1491232A355E00C5BC05 /* SystemConfiguration.framework */; };
+		275D1494232A356B00C5BC05 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 275D1493232A356B00C5BC05 /* libz.tbd */; };
+		27770D4623268F5100BF5AA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27770D4523268F5100BF5AA2 /* GoogleService-Info.plist */; };
 		277715822323F372005F67AD /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 278B85C0231A8049000F4B24 /* AntDesign.ttf */; };
 		277715832323F372005F67AD /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 278B85C3231A8049000F4B24 /* Entypo.ttf */; };
 		277715842323F372005F67AD /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 278B85C1231A8049000F4B24 /* EvilIcons.ttf */; };
@@ -133,6 +139,11 @@
 		21D97FA5D86B4C49A253873A /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
 		2534BDAAE8CE4F2A9EEE6A10 /* SF_Toontime_Blotch.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SF_Toontime_Blotch.ttf; path = ../assets/fonts/SF_Toontime_Blotch.ttf; sourceTree = "<group>"; };
 		26C5579C426242878C5A4F74 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = ../assets/fonts/EvilIcons.ttf; sourceTree = "<group>"; };
+		275D148D232A354F00C5BC05 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		275D148F232A355600C5BC05 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		275D1491232A355E00C5BC05 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		275D1493232A356B00C5BC05 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		27770D4523268F5100BF5AA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		278B857F231A8009000F4B24 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 		278B8580231A8009000F4B24 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		278B8581231A8009000F4B24 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
@@ -258,6 +269,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275D1494232A356B00C5BC05 /* libz.tbd in Frameworks */,
+				275D1492232A355E00C5BC05 /* SystemConfiguration.framework in Frameworks */,
+				275D1490232A355600C5BC05 /* SafariServices.framework in Frameworks */,
+				275D148E232A354F00C5BC05 /* AddressBook.framework in Frameworks */,
 				79CF6478CCF0C8C6F24687AC /* libPods-letmefy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +316,7 @@
 		13B07FAE1A68108700A75B9A /* letmefy */ = {
 			isa = PBXGroup;
 			children = (
+				27770D4523268F5100BF5AA2 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -364,6 +380,10 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				275D1493232A356B00C5BC05 /* libz.tbd */,
+				275D1491232A355E00C5BC05 /* SystemConfiguration.framework */,
+				275D148F232A355600C5BC05 /* SafariServices.framework */,
+				275D148D232A354F00C5BC05 /* AddressBook.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				61A3E8BCFF0D93A3529889D2 /* libPods-letmefy.a */,
@@ -669,6 +689,7 @@
 			files = (
 				277715822323F372005F67AD /* AntDesign.ttf in Resources */,
 				277715832323F372005F67AD /* Entypo.ttf in Resources */,
+				27770D4623268F5100BF5AA2 /* GoogleService-Info.plist in Resources */,
 				277715842323F372005F67AD /* EvilIcons.ttf in Resources */,
 				277715852323F372005F67AD /* Feather.ttf in Resources */,
 				277715862323F372005F67AD /* FontAwesome.ttf in Resources */,
@@ -676,6 +697,7 @@
 				277715882323F372005F67AD /* FontAwesome5_Regular.ttf in Resources */,
 				277715892323F372005F67AD /* FontAwesome5_Solid.ttf in Resources */,
 				2777158A2323F372005F67AD /* Fontisto.ttf in Resources */,
+				275D148A232A2C3200C5BC05 /* Info.plist in Resources */,
 				2777158B2323F372005F67AD /* Foundation.ttf in Resources */,
 				2777158C2323F372005F67AD /* Ionicons.ttf in Resources */,
 				2777158D2323F372005F67AD /* MaterialCommunityIcons.ttf in Resources */,
@@ -803,6 +825,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-letmefy/Pods-letmefy-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -844,6 +868,8 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -1072,6 +1098,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 8DK56KEZU2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = letmefy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1079,7 +1109,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uranashel.letmefy;
 				PRODUCT_NAME = letmefy;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1092,6 +1122,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8DK56KEZU2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = letmefy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1099,7 +1133,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uranashel.letmefy;
 				PRODUCT_NAME = letmefy;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

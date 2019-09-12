@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.letmefy"
+        applicationId "com.uranashel.letmefy"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -152,12 +152,12 @@ android {
             keyPassword 'android'
         }
 
-        // release {
-        //     storeFile file("../keystore/release_key.keystore")
-        //     storePassword "letmefy"
-        //     keyAlias "key0"
-        //     keyPassword "letmefy"
-        // }
+         release {
+             storeFile file("../keystore/release_key.keystore")
+             storePassword "letmefy"
+             keyAlias "key0"
+             keyPassword "letmefy"
+         }
     }
     buildTypes {
         debug {
@@ -166,7 +166,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -197,6 +197,9 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-google-signin')
+    implementation project(':react-native-firebase')
+    implementation project(':react-native-fbsdk')
     implementation project(':react-native-linear-gradient')
     implementation project(':react-native-reanimated')
     implementation project(':react-native-blur-overlay')
@@ -207,6 +210,10 @@ dependencies {
     implementation 'com.android.support:transition:24.2.0'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation "com.google.firebase:firebase-messaging:18.0.0"
+    implementation "com.google.android.gms:play-services-base:16.1.0"
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
@@ -225,3 +232,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply plugin: 'com.google.gms.google-services'

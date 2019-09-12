@@ -126,10 +126,11 @@ export default {
 		},
 		PLACE_HOLDER: "https://smithssanitationsupply.ca/wp-content/uploads/2018/06/noimage-1.png"
 	},
-	WEB_CLIENT_ID:
-    "277276858297-u1gbl7jb8vib8co624tik5t26lpldc6e.apps.googleusercontent.com",
+  WEB_CLIENT_ID: "145701508811-phujvpgrfg0nujuhr8rj3g8tmec7ul0l.apps.googleusercontent.com",
+  iOS_CLIENT_ID: "com.googleusercontent.apps.145701508811-phujvpgrfg0nujuhr8rj3g8tmec7ul0l",
 	LOCATION_BACKGROUND_BTN: [0, 0.36, 1],
 	COLOR_BACKGROUND_BTN: ["#e2c85d", "#d9bf52", "#b89438"],
-	SPLASH_TIME_OUT: 5000,
+	SPLASH_TIME_OUT: 5500,
 	CONTENT_TIME_OUT: 3000,
+	BUTTON_TIME_OUT: 2000,
 };

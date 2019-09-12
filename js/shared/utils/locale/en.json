@@ -16,7 +16,7 @@
   "welcomeScreen": {
     "title": "Have a nice tour",
     "motto": "Let those be together, everytime, everywhere!",
-    "login": "Log in",
-    "signUp": "Sign up"
+    "loginFBSDK": "Facebook",
+    "loginGoogleSDK": "Google"
   }
 }

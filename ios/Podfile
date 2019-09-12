@@ -40,6 +40,17 @@ target 'letmefy' do
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+  pod 'Firebase/Analytics'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+
+
+  pod 'GoogleSignIn', '< 5.0.0'
+
   target 'letmefyTests' do
     inherit! :search_paths
     # Pods for testing
